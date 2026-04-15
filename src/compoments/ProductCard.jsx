@@ -11,7 +11,9 @@ const ProductCard = ({ product }) => {
             <Link to={`/product/${product.id}`} className="btn btn-secondary">
                 View Details
             </Link>
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={() => {
+                // Add to cart logic here
+            }}>
                 Add to Cart
             </button>
             </div>

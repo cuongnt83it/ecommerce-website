@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-
+import NotFound from './pages/NotFound'
 import Home from './pages/Home'
 import Auth from './pages/Auth'
 import Checkout from './pages/Checkout' 
@@ -16,6 +16,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/auth' element={<Auth />} />
         <Route path='/checkout' element={<Checkout />} /> 
+        <Route path='*' element={<NotFound />} />
      </Routes>
    </div>
   )
