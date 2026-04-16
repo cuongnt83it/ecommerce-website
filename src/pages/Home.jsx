@@ -1,6 +1,6 @@
 import React from 'react'
 import { getProducts } from '../data/products'
-import { Link } from 'react-router-dom';
+
 import ProductCard from '../compoments/ProductCard';
 const Home = () => {
   const products = getProducts();

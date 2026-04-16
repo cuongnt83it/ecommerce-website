@@ -7,8 +7,9 @@ import Checkout from './pages/Checkout'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './compoments/Navbar'
 import AuthProvider from './context/AuthContext'
+import ProductDetails from './pages/ProductDetails'
 
-function App() {
+const App = () => {
   
   return (
     <AuthProvider>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/auth' element={<Auth />} />
         <Route path='/checkout' element={<Checkout />} /> 
+        <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='*' element={<NotFound />} />
      </Routes>
    </div>

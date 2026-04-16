@@ -1,6 +1,6 @@
-import {useState,useContext} from 'react';
-import { set, useForm } from 'react-hook-form';
-import { AuthContext } from '../context/AuthContext';
+import {useState} from 'react';
+import { useForm } from 'react-hook-form';
+import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -8,7 +8,7 @@ const Auth = () => {
   const [mode,setMode] = useState('login');
   const [error,setError] = useState(null);
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const {signup, login, user} = useContext(AuthContext);
+  const {signup, login, user} = useAuth();
   const navigate = useNavigate();
   const onSubmit = (data) => {
     setError(null);
